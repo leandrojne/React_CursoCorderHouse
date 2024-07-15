@@ -11,13 +11,13 @@
 		height: calc(~'100% + 40px');
 		margin: -20px 0 0;
 		border-radius: 0;
-		background-color: @color__secondary;
+		background: linear-gradient(45deg, @color__secondary, @color__tertiary);
 		color: @color__white;
 		position: relative;
 		cursor: pointer;
 
 		&:hover{
-			background-color: @color__tertiary;
+			background: linear-gradient(45deg, @color__tertiary, @color__secondary);
 		}
 
 		.items{

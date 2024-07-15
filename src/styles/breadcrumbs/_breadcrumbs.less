@@ -1,0 +1,27 @@
+.breadcrumbs{
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	margin-bottom: 30px;
+
+	> span, a{
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 5px;
+		line-height: 1.2;
+		color: @color__secondary;
+		text-transform: capitalize;
+
+		&.item{
+			color: @color__white;
+		}
+	}
+
+	a{
+		color: @color__white;
+		&:hover{
+			color: @color__secondary;
+		}
+	}
+}

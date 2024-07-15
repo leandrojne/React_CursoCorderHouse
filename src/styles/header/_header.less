@@ -3,12 +3,21 @@ header{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	border-bottom: 1px solid lighten(@bg__footer, 5%);
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 
 	.logo{
 		a{
 			display: block;
-			max-width: 110px;
+			max-width: 250px;
 		}
+	}
+}
+
+@media (max-width: 769px) {
+	header .logo{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
 	}
 }
