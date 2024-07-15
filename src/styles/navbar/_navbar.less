@@ -12,9 +12,18 @@ nav{
 			font-size: 16px;
 			text-decoration: none;
 
+			&:active,
+			&:visited{
+				color: @color__white;
+			}
+			&.nav-link.show,
 			&:hover{
 				color: @color__secondary;
 			}
+		}
+
+		.dropdown-menu{
+			background-color: @color__main;
 		}
 	}
 }

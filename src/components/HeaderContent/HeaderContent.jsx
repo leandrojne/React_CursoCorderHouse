@@ -1,5 +1,6 @@
-import LogoUrl from '../../assets/logo.png'
+import LogoUrl from '../../assets/logo_store.png'
 import NavBar from "../NavBar/NavBar.jsx";
+import {Link} from "react-router-dom";
 export default function HeaderContent() {
     return (
         <header className='fluid-container'>
@@ -7,9 +8,9 @@ export default function HeaderContent() {
                 <div className="row">
                     <div className="col-sm-3">
                         <div className="logo">
-                            <a href="/">
+                            <Link to={'/'}>
                                 <img src={LogoUrl} alt="SitioWeb.com"/>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-sm-9">
