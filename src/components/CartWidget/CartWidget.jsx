@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from "react";
+import {useContext, useState} from "react";
 import {CartContext} from "../../context/CartContext.jsx";
 import { HiOutlineX, HiShoppingCart } from "react-icons/hi";
 import ItemMinicart from "../ItemMinicart/ItemMinicart.jsx";
@@ -8,11 +8,6 @@ import GrandTotals from "../GrandTotals/GrandTotals.jsx";
 export default function CartWidget() {
     const [cart ] = useContext(CartContext)
     const [cartVisible, setCartVisible] = useState(true)
-
-    useEffect(() => {
-        document.documentElement.classList.toggle('cart-active', !cartVisible);
-    }, [cartVisible]);
-
 
     const viewMinicar = () => {
         setCartVisible(!cartVisible)
