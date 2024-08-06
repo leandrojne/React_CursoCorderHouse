@@ -14,4 +14,4 @@
 <br>
 <h4>Pueden observar el Sitio Web productivo en: <a href="https://react.idiomavisual.com/" target="_blank">react.idiomavisual.com</a></h4>
 <br>
-<small>Copyright © 2024 ~ FrontEnd Developer: Leandro Nuñez ~</small>
+<i>Copyright © 2024 ~ FrontEnd Developer: Leandro Nuñez ~</i>
