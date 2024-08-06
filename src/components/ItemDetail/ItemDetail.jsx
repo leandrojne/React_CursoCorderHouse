@@ -1,8 +1,7 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import AddToCart from "../AddToCart/AddToCart.jsx";
 
-export default function ItemDetail({name, price, description, stock, image, brand, category}) {
-
+export default function ItemDetail({item}) {
     return (
         <div className='product-detail-content'>
             <div className="breadcrumbs">
@@ -10,38 +9,38 @@ export default function ItemDetail({name, price, description, stock, image, bran
                     Home
                 </Link>
                 <span>|</span>
-                <Link to={`/category/${category}`}>
-                    {category}
+                <Link to={`/category/${item.category}`}>
+                    {item.category}
                 </Link>
                 <span>|</span>
-                <span className='item'>{name}</span>
+                <span className='item'>{item.name}</span>
             </div>
             <div className="product-image">
-                <img src={image} alt=""/>
+                <img src={item.image} alt=""/>
             </div>
             <div className="product-info">
                 <div className="product-name">
-                    <h1>{name}</h1>
+                    <h1>{item.name}</h1>
                     <span className='brand'>
                         MARCA: <strong>
-                            <Link to={`/brand/${brand}`}>
-                                {brand}
+                            <Link to={`/brand/${item.brand}`}>
+                                {item.brand}
                             </Link>
                         </strong>  |
                         CATEGORÍA: <strong>
-                            <Link to={`/category/${category}`}>
-                                {category}
+                            <Link to={`/category/${item.category}`}>
+                                {item.category}
                             </Link>
                         </strong>
                     </span>
                 </div>
                 <div className="prices-stock">
-                    <span className='price'>$ {price}</span>
-                    <span className='stock'>Stock: {stock}</span>
+                    <span className='price'>$ {item.price.toLocaleString()}</span>
+                    <span className='stock'>Stock: {item.stock}</span>
                 </div>
-                <AddToCart productQty={stock}/>
+                <AddToCart item={item}/>
                 <div className="description">
-                    {description}
+                    {item.description}
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ export default function Item({item}) {
                 <img src={item.image} alt={item.name} title={item.name}/>
             </div>
             <h2>{item.name}</h2>
-            <p className='price'>$ {item.price}</p>
+            <p className='price'>$ {item.price.toLocaleString()}</p>
             <p className='brand'>
                 Marca: <Link to={`/brand/${item.brand}`}>
                     {item.brand}
