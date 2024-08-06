@@ -5,3 +5,24 @@
 @color__black: #000;
 
 @bg__footer: darken(@color__main, 1.5%);
+
+
+@input__background-color: #021320;
+@input__text-color: #6ea7ff;
+@input__placeholder-color: #032e72;
+
+@screen__xs: 400px;
+@screen__s: 640px;
+@screen__m: 767px;
+@screen__l: 1024px;
+@screen__xl: 1440px;
+
+
+@imagesDir: '../../../';
+
+.media-max-width(@break, @rules){
+	@media screen and (max-width: @break) { @rules()}
+}
+.media-min-width(@break, @rules){
+	@media screen and (min-width: @break) { @rules()}
+}

@@ -19,7 +19,7 @@
 			margin: 0;
 			padding: 0;
 			background: @color__tertiary;
-			font-size: 20px;
+			font-size: 15px;
 			cursor: pointer;
 
 			&:hover{
@@ -52,5 +52,17 @@
 	.add{
 		width: 100%;
 		padding-left: 25px;
+	}
+}
+
+.outofstock{
+	margin: 20px 0;
+
+	.btn.primary{
+		cursor: initial;
+		&:hover,
+		&:active{
+			background: linear-gradient(45deg, @color__secondary, @color__tertiary);
+		}
 	}
 }

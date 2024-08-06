@@ -1,6 +1,9 @@
 *{
 	box-sizing: border-box;
 }
+html.cart-active{
+	overflow: hidden
+}
 body{
 	background-color: @color__main;
 	color: @color__white;
@@ -66,9 +69,69 @@ h1{
 	}
 }
 
+.form-control{
+	border-radius: 0;
+	background-color: @input__background-color;
+	border: 1px solid @color__tertiary;
+	color: @input__text-color;
+
+	&::placeholder{
+		color: @input__placeholder-color;
+	}
+
+	&:focus{
+		background-color: @input__background-color;
+		border-color: @color__secondary;
+		color: @input__text-color;
+	}
+}
+
+label{
+	span{
+		color: @color__secondary;
+	}
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+	background-color: @input__background-color;
+	border: 1px solid @color__tertiary;
+	color: @input__text-color;
+}
+
+input{
+	border-radius: 0;
+	&[type="text"],
+	&[type="bumber"]{
+		border-radius: 0;
+	}
+}
+
+.box-border{
+	border: 1px solid @color__tertiary;
+	padding: 20px;
+	h2{
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+}
+
+
+
 .notfount{
 	img{
 		width: 600px;
 		margin: 0 auto;
 	}
 }
+
+.media-max-width((@screen__xs), {
+	.captcha iframe {
+		transform:scale(0.77);
+		transform-origin:0 0;
+	}
+});
+
+

@@ -1,3 +1,4 @@
+
 .product-detail-content {
 	display: flex;
 	align-items: flex-start;
@@ -63,3 +64,21 @@
 
 	}
 }
+
+
+.media-max-width(@screen__m, {
+	.product-detail-content {
+		.product-image {
+			width: 100%;
+			background: @color__white;
+			color: #1f5172;
+			margin-bottom: 40px;
+		}
+
+		.product-info {
+			width: 100%;
+			margin-left: 0;
+			text-align: left;
+		}
+	}
+});

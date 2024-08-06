@@ -1,0 +1,60 @@
+@imagesDir: '../../../';
+.notificacion{
+	padding: 8px 15px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-items: flex-start;
+
+	p{
+		margin: 0;
+	}
+
+	&:before{
+		display: block;
+		width: 30px;
+		min-width: 30px;
+		height: 30px;
+		content: '';
+		background-size: 100%;
+		color: red;
+		margin-right: 5px;
+	}
+
+	&.noti{
+		&-success{
+			background-color: #a8e29f;
+			border: 1px solid #044104;
+			color: #044104;
+
+			&:before{
+				background: url(../../assets/icon_success.svg) no-repeat;
+			}
+		}
+
+		&-warning{
+			background-color: #e0d3a2;
+			border: 1px solid #66540c;
+			color: #66540c;
+			&:before{
+				background: url(../../assets/icon_alert.svg) no-repeat;
+			}
+		}
+		&-error{
+			background-color: #fbabab;
+			border: 1px solid #6b0707;
+			color: #6b0707;
+			&:before{
+				background: url(../../assets/icon_error.svg) no-repeat;
+			}
+		}
+		&-info{
+			background-color: #abe2ff;
+			border: 1px solid #0050bb;
+			color: #0050bb;
+			&:before{
+				background: url(../../assets/icon_info.svg) no-repeat;
+			}
+		}
+	}
+}

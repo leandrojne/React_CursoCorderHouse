@@ -5,6 +5,11 @@ header{
 	border-bottom: 1px solid lighten(@bg__footer, 5%);
 	margin-bottom: 50px;
 
+	.content-logo{
+		display: flex;
+		align-items: center;
+	}
+
 	.logo{
 		a{
 			display: block;
@@ -13,11 +18,65 @@ header{
 	}
 }
 
-@media (max-width: 769px) {
+.top-header{
+	background: linear-gradient(45deg, @color__secondary, @color__tertiary);
+	padding: 10px;
+	border-bottom: 1px solid @bg__footer;
+
+
+	.welcome{
+		display: flex;
+		align-items: baseline;
+		justify-items: flex-start;
+		*{
+			line-height: 1;
+		}
+
+		strong{
+			margin: 0 5px;
+		}
+
+		a{
+			font-weight: 500;
+			font-size: 11px;
+			text-transform: uppercase;
+			margin: 0 0 0 5px;
+			text-decoration: underline;
+		}
+	}
+
+	a{
+		color: @color__white;
+		text-decoration: none;
+		display: inline-block;
+		width: auto;
+		font-weight: 600;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+
+.media-max-width(@screen__xs, {
+	.top-header{
+		.welcome{
+			display: block;
+		}
+	}
+});
+.media-max-width(@screen__s, {
+	header {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+});
+.media-max-width(@screen__m, {
 	header .logo{
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: 100%;
 	}
-}
+});
